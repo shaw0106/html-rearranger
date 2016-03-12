@@ -1,15 +1,15 @@
-var $above = ('class')
-var $li = ('li')
+var $aboveList = $('<ul>');
+var $belowList = $('<ul>');
 
-$('body').append('<h1>Below Ground Veggies</h1>');
-$('body').append('<h1>Above Ground Veggies');
+$('body').append('<h1>Below ground veggies</h1>');
+$('body').append($belowList);
+$('body').append('<h1>Above ground veggies</h1>');
+$('body').append($aboveList);
 
-if $(li).hasClass(below) {
-
-}
-
-
-//if ($(this).hasClass('below')
-//$('ul li').each(function () {
-  //$(this).addClass('kilo');
-//});
+$('ul li').each(function () {
+  if ($(this).hasClass('below')) {
+    $belowList.append($(this));
+  } else {
+    $aboveList.append($(this));
+  }
+});
